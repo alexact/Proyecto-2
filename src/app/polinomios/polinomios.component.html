@@ -1,0 +1,26 @@
+<div class="container">
+    <br>
+    <h2>Métodos raices de polinomio</h2>
+    <br>
+    <form  >
+    <div class="row">
+      <div class="col-6">
+        <div class="col-12">
+          <h4>Ingrese la ecuación:</h4>
+          <input type="text" class="form-control"  #ecuacion placeholder="Ej: x^2 + 2*x"    >
+        </div>
+        <div class="col-12">
+            <br>
+            <button class="btn btn-primary btn-lg btn-block"  (click)="polinomio(ecuacion.value)" type="button">Evaluar</button>  
+            </div> 
+      </div>
+      <div class="col-6">
+          <div class="col-12" >
+              <h4>{{resultado.pol}}</h4> 
+            </div>
+      <img src = "{{plot}}" width="100%"> 
+    </div>
+    </div>
+  </form>
+  
+  </div>

@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Métodos Numéricos</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bases y Representacion numérica</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/representacion">Representación de memoria de 32 y 64 bits</a>
+            <a class="dropdown-item" href="/bases">Cambio de bases</a>
+          </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/metodos">Evaluador de ecuaciones</a>   
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Métodos de ecuaciones</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/biseccion">Biseccion</a>
+          <a class="dropdown-item" href="/secante">Secante</a>
+          <a class="dropdown-item" href="/newtonrapshon">Newton Rapshon</a>
+          <a class="dropdown-item" href="/reglafalsa">Regla Falsa</a>
+          <a class="dropdown-item" href="/puntofijo">Punto fijo</a>
+          <a class="dropdown-item" href="/polinomios">Polinomios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Métodos de integración
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/rectangulos">Rectangulos</a>
+          <a class="dropdown-item" href="/trapecio">Trapecio</a>
+          <a class="dropdown-item" href="/montecarlo">Montecarlo</a>
+          <a class="dropdown-item" href="/suntercio">Simpson 1/3</a>
+          <a class="dropdown-item" href="/stresoctavos">Simpson 3/8</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

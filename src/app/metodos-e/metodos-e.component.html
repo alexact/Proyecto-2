@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Evaluador</h2>
+  <br>
+  <form  >
+  <div class="row">
+    <div class="col-6">
+      <div class="col-12">
+        <h4>Ingrese la ecuación:</h4>
+        <input type="text" class="form-control"  #ecuacion placeholder="Ej: x^2 + 2*x"    >
+      </div>
+      <div class="col-12">
+        <br>
+        <h4>Xo:</h4>
+        <input type="text" class="form-control" #valor placeholder="Ej:7" >
+      </div>
+      <div class="col-12">
+          <br>
+          <button class="btn btn-primary btn-lg btn-block"  (click)="evaluar(ecuacion.value, valor.value)" type="button">Evaluar</button>  
+          </div>
+          
+
+    </div>
+    <div class="col-6">
+        <div class="col-12" >
+            <h4>{{resultado.response}}</h4> 
+          </div>
+    <img src = "{{plot}}" width="100%"> 
+  </div>
+  </div>
+</form>
+
+</div>

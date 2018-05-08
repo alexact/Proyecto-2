@@ -1,0 +1,56 @@
+<div class="container">
+    <h2>Método de biseccion</h2>
+    <br>
+    <form  >
+    <div class="row">
+      <div class="col-6">
+        <div class="col-12">
+          <h4>Ingrese la ecuación:</h4>
+          <input type="text" class="form-control"(keyup.enter)="graficadora(ecuacion.value)" (blur)="graficadora(ecuacion.value)" #ecuacion placeholder="Ej: x^2 + 2*x"    >
+        </div>
+        <div class="col-12">
+          <br>
+          <h4>Limite inferior:</h4>
+          <input type="text" class="form-control" #limI placeholder="Ej:7" >
+        </div>
+        <div class="col-12">
+            <br>
+            <h4>Limite superior:</h4>
+            <input type="text" class="form-control" #limS placeholder="Ej:7" >
+          </div>
+          <div class="col-12">
+              <br>
+              <h4>Error:</h4>
+              <input type="text" class="form-control" #err placeholder="Ej:7" >
+            </div>
+        <div class="col-12">
+            <br>
+            <button class="btn btn-primary btn-lg btn-block"  (click)="biseccion(ecuacion.value, limI.value,limS.value,err.value)" type="button">Evaluar</button>  
+            </div>
+            
+  
+      </div>
+      <div class="col-6">
+          <div class="col-12" >
+         
+            </div>
+      <img src = "{{plot}}" width="100%"> 
+    </div>
+    </div>
+  </form>
+  <table class="table" *ngIf="table">
+    <thead class="secondary">
+      <tr>
+        <th scope="col">i</th>
+        <th scope="col">Xr</th>
+        <th scope="col">Error</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let arr of table">
+        <td *ngFor="let s of arr">{{s}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </div>

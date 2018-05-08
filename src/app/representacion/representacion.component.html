@@ -1,0 +1,109 @@
+
+
+<body>
+
+<div class="container">
+  <h2>Representación de memoria de 32bits y 64 bits</h2>
+  <br>  
+  <br>  
+  
+  <p>Seleccione una de las opciones para comenzar</p>
+  <form #f="ngForm" >
+    <div class="radio">
+      <label><input type="radio" name="optradio"  value="1" 
+        [(ngModel)]="optradio"
+        >Convertir numero decimal o binario a representacion de memoria</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio"  value="2" 
+        [(ngModel)]="optradio"
+        >Convertir representación de memoria a numero decimal y binario</label>
+    </div>
+  </form>
+
+
+<div *ngIf="optradio=='1'" >
+    <form>
+        <div class="col-12">
+           <h4>Ingrese el numero a convertir:</h4>
+           <input type="text" class="form-control" #num placeholder="Ej: 2568 ">
+         </div>
+       <div class="col-12">
+         <br>
+         <h4>digite la base en la que se encuentra: (2)binaria o (10)decimal:</h4>
+         <input type="text" class="form-control" #base placeholder="Ej: (2)si es base 2 o (10) si es  base 10" >
+         </div>
+         <br>
+            <button class="btn btn-primary btn-lg btn-block"  (click)="representa(num.value, base.value)" type="button">Convertir</button>  
+            <div class="col-12">
+                <br>
+                <h3>Memoria de 32:</h3>
+                <br>
+                <h4> {{signo3}} {{exponente3}} {{mantisa3}} </h4>
+                <br>
+                <br>
+                <h3>Memoria de 64:</h3>
+                <br>
+                <h4> {{signo6}} {{exponente6}} {{mantisa6}} </h4>
+                <br>
+              </div>
+          </form>
+    </div>
+    <div *ngIf="optradio=='2'">
+        <form #f="ngForm">    
+               <h4>Ingrese el signo: </h4>
+
+               <div class="btn-group">
+                  <button type="button" name="memoria" class="btn btn-danger">Memoria</button>
+                 
+                  <button type="button" class="btn btn-danger dropdown-toggle"
+                          data-toggle="dropdown">
+
+                    <span class="sr-only">Desplegar menú</span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a #memoria name="memoria" value="32">32</a></li>
+                    <li><a #memoria name="memoria" value="64">64</a></li>
+                  </ul>
+                </div>
+                  <div class="btn-group">
+                  <button type="button" name="signo" class="btn btn-danger" (click)="valores(signo.value)">Signo</button>
+
+                  <button type="button" class="btn btn-danger dropdown-toggle"
+                          data-toggle="dropdown">
+
+                    <span class="sr-only">Desplegar menú</span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a  name="signo"  #signo >0:Positivo</a></li>
+                    <li><a #signo name="signo"  #signo >1:Negativo</a></li>
+                  </ul>
+                </div>
+            <p>touches: {{signo.touched}}</p>
+           <div class="col-12">
+             <br>
+             <h4>Digite el exponente:</h4>
+             <input type="text" class="form-control" #exponente placeholder="Ej: 10000010" >
+             </div>
+             <br>
+             <div class="col-12">
+                <br>
+                <h4>Digite la mantisa:</h4>
+                <input type="text" class="form-control" #mantisa placeholder="Ej: 01010000000000000000000" >
+                </div>
+                <br>
+                <button class="btn btn-primary btn-lg btn-block"  (click)="inversa(signo.value, exponente.value, mantisa.value)" type="button">Convertir</button>  
+                <div class="col-12">
+                    <br>
+                    <h3>Numero en decimal</h3>
+                    <br>
+                    <p>Mantisa: {{memoria}}</p>
+                  </div>
+              </form>
+        </div>
+      </div>
+      <div *ngIf="memoria.value=="32"">
+        <p>31FGDFG</p>
+    </div>
+</body>
+
